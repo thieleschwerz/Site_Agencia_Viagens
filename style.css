@@ -16,7 +16,7 @@ ul{
 
 header{
     height: calc(100vh - 150px);
-    background: no-repeat center/cover url(/img/walkingbridge.jpg);
+    background: no-repeat center/cover url(img/walkingbridge.jpg);
 }
 
 header nav{
