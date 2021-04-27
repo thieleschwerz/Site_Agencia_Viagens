@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visite Chattanooga</title>
+    <script src="https://unpkg.com/feather-icons"></script><!-- incluindo icones -->
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p></p>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div id="home" class="header-content">
+            <h1>Visite Chattanooga</h1>
+            <p> Nossa agência é especializada em aventuras. Oferecemos também pacotes e ingressos para as principais atrações da cidade. Venha nos conhecer!</p>
+            <button> Saiba Mais</button>
+        </div>
+    </header>
+
+<section id="pacotes" class="pacotes">
+
+    <div class="pacotes-title">
+    <h1>Conheça nossos pacotes</h1>
+    </div>
+
+    <div class="pacotes-cards">
+    <div class="card">
+        
+        <div class="card-tag card-tag-bottom">
+             <p>$40.00</p>
+        </div>
+       <img class="card-image" src="/img/rockcity.JPG">
+         <div class="card-content">
+            <h1>Rock City</h1>
+            <ul>
+                <li> <i data-feather="file"></i>Ingresso</li>
+                <li> <i data-feather="camera"></i>Foto Personalizada</li>
+                <li>  <i data-feather="home"></i>Transporte</li>
+           </ul>
+      
+        </div>
+   </div>
+
+   <div class="card">
+        <div class="card-tag card-tag-top">
+            <p>Promoção</p>
+        </div>
+
+        <div class="card-tag card-tag-bottom">
+             <p>$90.00</p>
+        </div>
+        <img class="card-image" src="/img/offroad.JPG">
+        <div class="card-content">
+            <h1>Trilha em 4x4</h1>
+            <ul>
+                <li>  <i data-feather="truck"></i>Aluguel Carro</li>
+                <li> <i data-feather="user"></i>Guia</li>
+                <li> <i data-feather="camera"></i>Foto Profissional</li>
+            </ul>
+  
+        </div>
+    </div>
+
+    <div class="card">
+        
+        <div class="card-tag card-tag-bottom">
+             <p>$50.00</p>
+        </div>
+        <img class="card-image" src="/img/hike.JPG">
+        <div class="card-content">
+            <h1>Trilha Cachoeira</h1>
+            <ul>
+                <li> <i data-feather="map"></i>Mapa</li>
+                <li> <i data-feather="user"></i>Guia</li>
+                <li>  <i data-feather="camera"></i>Foto Profissional</li>
+            </ul>
+  
+        </div>
+    </div>
+
+    <div class="card">
+        
+        <div class="card-tag card-tag-bottom">
+             <p>$60.00</p>
+        </div>
+        <img class="card-image" src="/img/Aquario.JPG">
+        <div class="card-content">
+            <h1>Aquário</h1>
+            <ul>
+                <li> <i data-feather="file"></i>Ingresso</li>
+                <li> <i data-feather="tv"></i>Seção Cinema</li>
+                <li>  <i data-feather="camera"></i>Foto Personalizada</li>
+            </ul>
+  
+        </div>
+    </div>
+
+
+</div>
+</section>
+
+<section id="servicos" class="servicos">
+    <h1 class="servicos-title">Serviços</h1>
+    
+    <div class="servicos-cards">
+        <div class="card">
+            <i data-feather="map"></i>
+            <h3>Tours Guiados</h3>
+            <p>Os tours guiados são passeios realizados com auxílio de um guia, que além de passar informações sobre o local vai nos conduzir ao longo do trajeto</p>
+         
+        </div>
+
+        <div class="card">
+            <i data-feather="camera"></i>
+            <h3>Fotografia Profissional</h3>
+            <p>Nossos fotografos estão acostumados a registrar os melhores momentos das aventuras para que você aproveite a paisagem sem se preocupar</p>
+           
+        </div>
+        
+        <div class="card">
+            <i data-feather="navigation"></i>
+            <h3>Aluguel de Veículo</h3>
+            <p>Oferecemos serviço de aluguel de veículos 4x4, motocicletas e MTB com preços especiais</p>
+           
+        </div>
+    </div>
+
+</section>
+
+        <section id="contato" class="contato">
+            <div class="contato-card">
+                <h1>Entre em Contato</h1>
+                <ul>
+                <li><i data-feather="map-pin"></i>150 River st, TN 37405</li>
+                <li><i data-feather="mail"></i>visite@chattanooga.com</li>
+                <li><i data-feather="smartphone"></i>+1 999 888 7777</li>
+                </ul>
+            </div>
+        <div id="map"></div>
+        </section>
+
+    <script>
+          feather.replace()
+          
+        // fazendo com que ao clicar no menu ele role ate a secao de forma suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+              });
+            });
+        });
+
+          // acrescentando o mapa, parte JavaScript
+          function initMap() {
+        // The location of chattanooga
+        const chattanooga = { lat: 35.045631, lng: -85.309677 };
+        // The map, centered at chattanooga
+        const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: chattanooga,
+                });
+
+        // coloquei o marcador para ficar no tennesse
+        const marker = new google.maps.Marker({
+        position: chattanooga,
+        map: map,
+        });
+         }
+        
+    </script>
+
+    <!--para eliminar o erro e usar como demonstracao removi a parte "key=YOUR_API_KEY&"" da fonte abaixo -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly"
+            async>
+    </script>   
+
+</body>
+</html>

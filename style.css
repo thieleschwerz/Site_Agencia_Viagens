@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /*importando a fonte do google fonts*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* considera o padding no tamanho total do elemento */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /*acrescentando a fonte conforme google fonts */
+}
+
+ul{
+    list-style: none; /*tirar os marcadores da lista */
+}
+
+header{
+    height: calc(100vh - 150px);
+    background: no-repeat center/cover url(/img/walkingbridge.jpg);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 30px;
+}
+
+header nav p{
+    font-weight: bold;
+    margin: 12px 12px;
+    color: white;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #145599;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    color: black;
+    transition: .3s ease all;
+}
+
+header nav ul {
+  display: flex;
+  margin: 12px 12px;
+}
+
+header nav ul li{
+    margin: 0 15px;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    border:none;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover{
+    background-color: #d3d3d3;
+    opacity: 0.75;
+    color: black;
+    transition: .3s ease all;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.header-content{
+    max-width: 400px;
+    margin: 150px auto;
+    color: aliceblue;
+    text-align: center;
+}
+
+.header-content h1{
+    margin-bottom: 10px;
+}
+
+.pacotes{
+    background-color: #e1e8f7;
+    padding: 15px;
+}
+
+.pacotes-title{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.pacotes .pacotes-cards{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap; /*Conforme vai diminuindo a tela os cards vao ficando um embaixo do outro */
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.pacotes .card{
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 24px 0 24px 0;
+    position: relative; /*esta vai ser a referencia para o card-tag-top */
+}
+
+.pacotes .card-image{
+    width: 250px;
+    height: 200px;
+    border-radius: 24px 0 0 0;
+    object-fit: cover;
+}
+
+.pacotes .card-content h1{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.pacotes .card-content ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.pacotes .card-content li{
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    color: grey;
+}
+
+.pacotes .card-content li svg{
+    width: 18px;
+    height: 18px;
+    margin: 8px;
+}
+
+.pacotes .card .card-tag-top{
+    position: absolute; /* esta posicao vai colocar o testo em cima da foto */
+    right: 0;
+    top: 15px;
+    background-color: #145599;
+    border-radius: 8px 0 0 8px;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag-bottom{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    background: #FF8427;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 10px;
+}
+
+.pacotes .card .card-tag p{
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.servicos {
+    padding: 15px;
+}
+
+.servicos .servicos-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 25px;
+}
+
+.servicos .servicos-cards{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 950px;
+    padding: 15px 0;
+    flex-wrap: wrap;
+
+}
+
+.servicos .card{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px  25px;
+
+}
+
+.servicos .card svg{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    color: #145599;
+}
+
+.servicos .card h3 {
+    font-weight: bold;
+    color: #145599;
+}
+
+.servicos .card p{
+    color: #145599;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Acrescentando o mapa na parte de contato */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
+
+.contato{
+    padding: 60px;
+    background-color: #e1e8f7;
+    position: relative;
+}
+
+.contato .contato-card{
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    z-index: 99; 
+    background-color: white;
+    bottom: 130px;
+    left: 150px; 
+    border-radius: 8px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    
+}
+
+.contato .contato-card h1{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.contato .contato-card li{
+    list-style: none;
+    font-size: .8 rem;
+    font-weight: bold;
+    color: #145599;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 15px;
+    padding-left: 25px;
+}
+
+.contato .contato-card li svg{
+    width: 16px;
+    margin: 10px;
+
+}
+/* Responsividade */
+
+/* Por conta do mapa foi preciso acrescentar mais um para que fique bem posicionado */
+@media (max-width: 950px) {
+      .contato{
+          padding: 60px 0;
+      }
+
+      .contato .contato-card{
+        left: 40px;
+    }
+      
+}
+
+@media (max-width: 800px) {
+    .contato {
+        padding: 10px 0;
+    }
+    /* mudo a posicao para um ficar embaixo do outro */
+    .contato .contato-card {
+        position: static;
+        margin: 25px auto;
+    }   
+
+}
+
+
+
+/* Orientacao retrato para teledone e menores */
+@media(max-width:480px){
+    body{
+        margin-bottom: 55px;
+    }
+    
+    header nav ul{
+        position: fixed; /*tira a barra de menu do topo e fica nofinal*/
+        bottom:0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: lightskyblue;
+        color: white;
+        font-weight: bold;
+
+        z-index: 99; /*como os cards tinham se sobreposto ao menu, uso o z-index para determinar a ordem de qual elemento cobre o outro */
+
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav p{
+        width: 100%;
+        text-align: center;
+    }
+
+       
+}
