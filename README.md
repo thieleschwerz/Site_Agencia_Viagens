@@ -35,3 +35,9 @@ Ferramentas adicionais:
 :point_right:https://developers.google.com/maps/documentation/javascript/adding-a-google-map Acrescentando o mapa na parte de contato.
 
 :point_right:https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link Ao clicar nos botões do menu ele rola suavemente até a posição em que está a informação
+
+## Mobile Behavior
+![gif mobile](https://github.com/thieleschwerz/Site_Agencia_Viagens/blob/master/Responsividade/Tela%20360.gif?raw=true)
+
+## Desktop Behavior
+![gif desktop](https://github.com/thieleschwerz/Site_Agencia_Viagens/blob/master/Responsividade/Tela%201254.gif?raw=true)
