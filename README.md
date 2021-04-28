@@ -14,10 +14,6 @@ Minha proposta foi uma agência de turismo com pacotes de passeio na cidade que 
 
 ✔️CSS
 
-✔️JavaScript
-
-
-
 Ferramentas adicionais:
 
 :point_right: Figma: Usado para protótipo para interface,  neste caso usamos para colar as inspirações e construir nossa ideia.
